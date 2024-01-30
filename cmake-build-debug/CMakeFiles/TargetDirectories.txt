@@ -1,0 +1,3 @@
+/home/michael/LinuxSystem&ConcuringProgrammingInC/project_threads/cmake-build-debug/CMakeFiles/project_threads.dir
+/home/michael/LinuxSystem&ConcuringProgrammingInC/project_threads/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/michael/LinuxSystem&ConcuringProgrammingInC/project_threads/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,33 @@
+problem mikolaja:
+2 globalne zmienne:
+ilosc gotowych reniferow
+ilosc gotowych skrzatow
+
+3 mutexy:
+ogolny (mikolajowy)
+skrzatowy
+reniferowy
+
+mutex ogolny jest wykorzystywany przy wszystkich oczekiwaniach na sygnal.
+
+
+
+gdy skrzat jest gotowy, zwieksza ilosc gotowych skrzatow (blokujac i odblokowujac mutex skrzatowy)
+nastepnie sprawdza, ile jest gotowych skrzatow. jezeli wiecej niz 3, wysyla sygnal do mikolaja i czeka na odpowiedz.
+gdy dostanie odpowiedz, blokuje mutex skrzatowy, zmiejsza ilosc gotowych skrzatow i wraca do pracy.
+
+
+tak samo z reniferami, tylko wysylaja sygnal dla 9 gotowych zamiast >=3
+
+
+mikolaj czeka na sygnal. Gdy go dostanie, sprawdza, od kogo (ilosci gotowych stworzen)
+najpierw  blokuje wszystkie nowe sygnaly (wszystkie mutexy)
+nastepnie sprawdza renifery. Gdy to one wyslaly sygnal, pomaga im, a nastepnie wysyla sygnal broadcast do reniferow, aby odpoczywaly.
+
+dalej sprawdza skrzaty, dzieje sie to tak samo jak u reniferow.
+
+
+
+
+
+
